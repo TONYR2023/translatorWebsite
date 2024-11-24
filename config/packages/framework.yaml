@@ -1,0 +1,20 @@
+framework:
+    secret: '%env(APP_SECRET)%'  # La clé secrète pour l'application
+
+    # Configuration de la session
+    session:
+        enabled : true
+        handler_id: null
+        cookie_secure: auto  # Définit si les cookies de session doivent être sécurisés (https)
+        cookie_samesite: lax  # Politique de SameSite pour les cookies (lax signifie autoriser la navigation inter-domaines, mais avec quelques restrictions)
+
+    # Vous pouvez activer la protection CSRF ici (optionnel)
+    #csrf_protection: true
+
+    #translator
+    default_locale: '%env(DEFAULT_LOCALE)%'
+    translator:
+        default_path: '%kernel.project_dir%/translations'
+        fallbacks:
+            ['fr'] # Langue de repli en cas d'absence de traduction
+

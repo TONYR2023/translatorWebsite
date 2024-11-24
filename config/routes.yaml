@@ -1,0 +1,19 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+app_home:
+    path: /{_locale}/
+    controller: App\Controller\HomeController::index
+    requirements:
+        _locale: en|fr
+    defaults:
+        _locale: fr
+
+switch_language:
+    path: /switch-language/{_locale}
+    controller: App\Controller\LanguageController::switchLanguage
+    requirements:
+        _locale: 'fr|en'  # Assurez-vous que seules les langues que vous supportez sont autorisées

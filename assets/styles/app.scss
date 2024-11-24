@@ -1,0 +1,84 @@
+.nav {
+    position: relative; /* Permet au menu d’être positionné relativement à ce bloc */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Icône burger */
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  margin:20px;
+ 
+}
+
+.burger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+  
+}
+
+/* Animation sur icon-burger */
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Masquer le menu par défaut */
+.burger-menu {
+    position: relative;
+  width:100%;
+    top: 100%; /* Aligne le menu juste sous le bloc nav */
+    left: 0;
+    right: 0;
+   
+    padding: 10px;
+    display: flex;
+    justify-content: space-around; /* Alignement horizontal */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* Légère animation de montée */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Afficher le menu quand actif */
+.burger-menu.active {
+    opacity: 1;
+    visibility: visible;
+  background-color: rgba(128, 128, 128, 0.5);
+    transform: translateY(0); /* Repositionne le menu */
+}
+
+/* Liens dans le menu */
+.burger-menu li {
+    list-style: none;
+   
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.burger-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.burger-menu a:hover {
+    color: rgb(110, 165, 42);
+
+}

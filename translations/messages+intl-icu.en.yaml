@@ -1,0 +1,13 @@
+navbar:
+    home: "home"
+    prestation: "prestation"
+    tourism: "tourism"
+    informations : "informations"
+    switch_to_french: "Switch to French"
+  
+text-intro:
+  "welcome to tony's translation site.
+  we have several bla.
+  indeed, blabla is cool and fun."
+
+

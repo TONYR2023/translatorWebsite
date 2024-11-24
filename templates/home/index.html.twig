@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+TRANSLATOR - {{ app.request.locale | capitalize }}
+
+{% endblock %}
+
+{% block body %}
+<main>
+ <section class="container-index">
+    <h1>
+    {{ 'text-intro' | trans }}
+    </h1>
+    </section>
+</main>
+{% endblock %}

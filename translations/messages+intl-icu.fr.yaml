@@ -1,0 +1,11 @@
+navbar:
+  home: "accueil"
+  prestation: "prestation"
+  tourism: "tourisme"
+  informations : "informations"
+  switch_to_english: "Passer à l'anglais"
+
+text-intro:
+  "bienvenue sur le site de traduction de tony.
+  nous avons plusieurs bla.
+  en effet, le blabla c'est cool et amusant."

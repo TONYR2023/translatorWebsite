@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}
+				TRANSLATOR
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		<link
+		rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+		<!-- Inclure le fichier scss généré par Webpack Encore -->
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+	</head>
+
+	<body>
+		<div
+			id="app">
+			<!-- Navbar -->
+<header class="header">
+	<nav
+		class="nav">
+		<!-- Menu burger -->
+		<div class="burger-icon" id="burger-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<!-- Menu caché -->
+		<ul class="burger-menu" id="burger-menu">
+			<li>
+				<a href="{{ path('app_home', { '_locale': app.request.locale }) }}">Home</a>
+			</li>
+			<li>
+				<a href="{{ path('tourism', { '_locale': app.request.locale }) }}">Tourism</a>
+			</li>
+			<li>
+				<a href="{{ path('app_home', { '_locale': app.request.locale }) }}">Info</a>
+			</li>
+		
+	
+
+
+					<!-- Lien pour changer de langue -->
+                    <div>
+					<a href="{{ path('switch_language', { '_locale': app.request.locale == 'fr' ? 'en' : 'fr' }) }}">
+
+						{% if app.request.locale == 'fr' %}
+							<span class="fi fi-gb m-2"></span>
+
+
+						{% else %}
+							<span class="fi fi-fr m-2"></span>
+
+
+						{% endif %}
+					</a>
+                    </div>
+</ul>
+
+				</nav>
+			</header>
+			{% block body %}
+				<!-- Le contenu principal de la page -->
+			{% endblock %}
+			<footer></footer>
+
+			<!-- Inclure le fichier JavaScript généré par Webpack Encore -->
+			{% block javascripts %}
+				{{ encore_entry_script_tags('app') }}
+			{% endblock %}
+		</body>
+	</body>
+</html>
