@@ -1,7 +1,16 @@
 # translatorWebsite
 site de traduction
-3. Commencez à travailler sur votre CSS
+# 1. transferer le projet
+  Dans le terminal :
+  git clone copie du repository
 
+# 2. mettre a jour les dependances
+  composer install
+  npm install
+
+# 3. verifier les installation
+
+# 4. Commencez à travailler sur votre CSS
 Une fois sur la branche css, vous pouvez commencer à travailler sur vos fichiers CSS. Toutes vos modifications seront enregistrées dans cette branche spécifique sans affecter la branche dev.
 4. Valider vos changements sur la branche css
 
